@@ -1,36 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
-import {Tabs, TabScreen} from 'react-native-paper-tabs';
+import {Text} from 'react-native-paper';
+import {SceneMap, TabBar, TabBarItem, TabView} from 'react-native-tab-view';
 import {Music, Tracks} from './components';
+import stylesheet from './styles';
 
-const screens = {
-  Tracks: <Tracks />,
-  Playlists: <View style={{backgroundColor: 'black', flex: 1}} />,
-  Discover: <View style={{backgroundColor: 'black', flex: 1}} />,
-  Folders: <View style={{backgroundColor: 'black', flex: 1}} />,
-  Album: <View style={{backgroundColor: 'black', flex: 1}} />,
-};
+const scenes = SceneMap({
+  tracks: Tracks,
+  playlists: Tracks,
+  discover: Tracks,
+  folders: Tracks,
+  album: Tracks,
+});
 
 const Home = () => {
+  const styles = stylesheet();
+
+  const [index, setIndex] = useState(0);
+  const [routes] = useState([
+    {key: 'tracks', title: 'Tracks'},
+    {key: 'playlists', title: 'Playlists'},
+    {key: 'discover', title: 'Discover'},
+    {key: 'folders', title: 'Folders'},
+    {key: 'album', title: 'Album'},
+  ]);
+
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Music />
-      <Tabs
-        // defaultIndex={0} // default = 0
-        // uppercase={false} // true/false | default=true | labels are uppercase
-        // showTextLabel={false} // true/false | default=false (KEEP PROVIDING LABEL WE USE IT AS KEY INTERNALLY + SCREEN READERS)
-        // iconPosition // leading, top | default=leading
-        // style={{ backgroundColor:'#fff' }} // works the same as AppBar in react-native-paper
-        // dark={false} // works the same as AppBar in react-native-paper
-        // theme={} // works the same as AppBar in react-native-paper
-        mode="scrollable" // fixed, scrollable | default=fixed
-        // onChangeIndex={(newIndex) => {}} // react on index change
-        // showLeadingSpace={true} //  (default=true) show leading space in scrollable tabs inside the header
-      >
-        {Object.entries(screens).map(([key, value]) => (
-          <TabScreen label={key}>{value}</TabScreen>
-        ))}
-      </Tabs>
+      <TabView
+        navigationState={{index, routes}}
+        renderTabBar={props => (
+          <TabBar
+            {...props}
+            scrollEnabled
+            renderTabBarItem={({key, ...item_props}) => (
+              <TabBarItem
+                {...{key, ...item_props}}
+                style={styles.tabBarContainer}
+                labelStyle={[
+                  styles.tabBarLabel,
+                  routes[index].key === key ? styles.activeBarItem : null,
+                ]}
+              />
+            )}
+          />
+        )}
+        renderScene={scenes}
+        onIndexChange={setIndex}
+        initialLayout={{width: 300}}
+      />
     </View>
   );
 };

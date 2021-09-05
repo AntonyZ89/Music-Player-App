@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {useTheme} from 'react-native-paper';
 
-export default () => {
+const styles = () => {
   const {
     colors: {primary, headerColor},
   } = useTheme();
@@ -24,7 +24,17 @@ export default () => {
       marginRight: 10,
     },
     info: {
-      flex: 0.9,
+      flex: 0.95,
+    },
+    trackCardContainer: {
+      flexDirection: 'row',
+      paddingHorizontal: 15,
+      paddingVertical: 10,
+      alignItems: 'center',
+    },
+    trackCardTime: {
+      color: 'white',
+      marginRight: 20
     },
     track: {
       color: headerColor,
@@ -39,5 +49,18 @@ export default () => {
       alignItems: 'center',
       color: headerColor,
     },
+    tabBarContainer: {
+      backgroundColor: primary,
+    },
+    tabBarLabel: {
+      fontWeight: 'bold',
+      color: 'white',
+    },
+    activeBarItem: {
+      backgroundColor: '#6e3c42',
+      padding: 10,
+    },
   });
 };
+
+export default styles;

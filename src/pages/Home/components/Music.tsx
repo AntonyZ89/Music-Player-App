@@ -2,22 +2,22 @@ import React from 'react';
 import {View} from 'react-native';
 import {Text} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import styles from '../styles';
+import stylesheet from '../styles';
 
 const Music = () => {
-  const s = styles();
+  const styles = stylesheet();
 
   return (
-    <View style={s.musicContainer}>
-      <View style={s.musicIcon}>
+    <View style={styles.musicContainer}>
+      <View style={styles.musicIcon}>
         <Icon size={32} color={'black'} name={'music'} />
       </View>
-      <View style={s.info}>
-        <Text style={s.track}>Track 01</Text>
-        <Text style={s.artist}>SendAnywhere</Text>
+      <View style={styles.info}>
+        <Text style={styles.track}>Track 01</Text>
+        <Text style={styles.artist}>SendAnywhere</Text>
       </View>
-      <View style={s.toggle}>
-        <Icon size={32} color={s.toggle.color} name={'play'} />
+      <View style={styles.toggle}>
+        <Icon size={32} color={styles.toggle.color} name={'play'} />
       </View>
     </View>
   );

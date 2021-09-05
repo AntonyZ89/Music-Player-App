@@ -1363,7 +1363,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react-native@^0.64.5":
+"@types/react-native-vector-icons@^6.4.8":
+  version "6.4.8"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.8.tgz#7dd9740f36a71e98c484b9ea12155940c85cedc2"
+  integrity sha512-ImqhwVPHtcWrfwaS4vVrnN/C1mY50+Gjer4wMltUJlkt9pTJ5WXCyn8VFPmxC5h8Zy0DBN2tYdusBZ2xJP14OA==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native@*", "@types/react-native@^0.64.5":
   version "0.64.13"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.13.tgz#9e57b85631380b75979a09f5a97e1884299e8d5a"
   integrity sha512-QSOBN6m3TKBPFAcDhuFItDQtw1Fo1/FKDTHGeyeTwBXd3bu0V9s+oHEhntHN7PUK5dAOYFWsnO0wynWwS/KRxQ==
@@ -5497,11 +5505,6 @@ react-native-pager-view@^5.4.1:
   resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-5.4.1.tgz#88641ff083ca4379497dc03891fdc2d5b6f82263"
   integrity sha512-P/aGuJqRe/HaocYd8o6TsO9YQMFPQrVnkjph9vZ+yg3HCCF/7XLRlntOLEs24Vmg4M+02MjpH557WACpBADi/A==
 
-react-native-paper-tabs@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/react-native-paper-tabs/-/react-native-paper-tabs-0.4.2.tgz#366cbe232c70b2bdaa2e09e22c039f78520b9095"
-  integrity sha512-VCpdBuaB/bqI6eVLNxnGLlBiOC4krgwS4O4ZrmXPOpedmuAQwcFJN/Arw62zpTdv3NjbC3U+X6/GMtzYJInm8g==
-
 react-native-paper@^4.9.2:
   version "4.9.2"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.9.2.tgz#6ecdd81acf2cf4d6d5f0247d4c1812dea93eade0"
@@ -5522,6 +5525,11 @@ react-native-screens@^3.6.0:
   integrity sha512-emQmSu+B6cOIjJH2OIgpuxd9zCD6xz7/oo5GCetyjsM5qR3sMnVgOxqtK99xPu9XJH/8k7MplXbtJgtk/PHXwA==
   dependencies:
     warn-once "^0.1.0"
+
+react-native-tab-view@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-3.1.1.tgz#1f8d7a835ab4f5b1b1407ec8dddc1053b53fa3c6"
+  integrity sha512-M5pRN6utQfytKWoKlKVzg5NbkYu308qNoW1khGTtEOTs1k14p2dHJ/BWOJoJYHKbPVUyZldbG9MFT7gUl4YHnw==
 
 react-native-vector-icons@^8.1.0:
   version "8.1.0"
