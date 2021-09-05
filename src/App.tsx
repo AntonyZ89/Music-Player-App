@@ -10,11 +10,13 @@ import {
   Provider as PaperProvider,
 } from 'react-native-paper';
 import React from 'react';
-import {Home} from './pages';
+import {Home, Player} from './pages';
 import {StatusBar} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 type AppStackParamList = {
   Home: undefined;
+  Player: undefined;
 };
 
 const CombinedDefaultTheme = {
@@ -52,14 +54,27 @@ const App = () => {
         <Stack.Navigator initialRouteName={'Home'}>
           <Stack.Screen
             options={{
+              title: 'My Music',
               headerStyle: {
                 backgroundColor: CombinedDefaultTheme.colors.primary,
+              },
+              headerLeft: () => (
+                <Icon
+                  name={'bars'}
+                  color={CombinedDefaultTheme.colors.headerColor}
+                  size={25}
+                />
+              ),
+              headerLeftContainerStyle: {
+                marginLeft: 20,
+                marginRight: 5,
               },
               headerTintColor: CombinedDefaultTheme.colors.headerColor,
             }}
             name={'Home'}
             component={Home}
           />
+          <Stack.Screen name={'Player'} component={Player} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

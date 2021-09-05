@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import {Text} from 'react-native-paper';
+import {FAB} from 'react-native-paper';
 import {SceneMap, TabBar, TabBarItem, TabView} from 'react-native-tab-view';
-import {Music, Tracks} from './components';
+import {Discover, Music, Tracks} from '../../components';
 import stylesheet from './styles';
 
 const scenes = SceneMap({
   tracks: Tracks,
   playlists: Tracks,
-  discover: Tracks,
+  discover: Discover,
   folders: Tracks,
   album: Tracks,
 });
@@ -28,6 +28,7 @@ const Home = () => {
   return (
     <View style={{flex: 1}}>
       <Music />
+      <FAB icon={'shuffle'} style={styles.FAB} />
       <TabView
         navigationState={{index, routes}}
         renderTabBar={props => (

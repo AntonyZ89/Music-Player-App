@@ -2,14 +2,14 @@ import React from 'react';
 import {View} from 'react-native';
 import {Text} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import stylesheet from '../styles';
+import stylesheet from './styles';
 
 const Music = () => {
   const styles = stylesheet();
 
   return (
-    <View style={styles.musicContainer}>
-      <View style={styles.musicIcon}>
+    <View style={styles.container}>
+      <View style={styles.icon}>
         <Icon size={32} color={'black'} name={'music'} />
       </View>
       <View style={styles.info}>
