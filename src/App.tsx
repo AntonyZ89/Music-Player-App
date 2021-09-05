@@ -11,10 +11,10 @@ import {
 } from 'react-native-paper';
 import React from 'react';
 import {Home, Player} from './pages';
-import {StatusBar} from 'react-native';
+import {StatusBar, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-type AppStackParamList = {
+export type AppStackParamList = {
   Home: undefined;
   Player: undefined;
 };
@@ -74,7 +74,40 @@ const App = () => {
             name={'Home'}
             component={Home}
           />
-          <Stack.Screen name={'Player'} component={Player} />
+          <Stack.Screen
+            options={{
+              title: '',
+              headerStyle: {
+                backgroundColor: 'transparent',
+                elevation: 0,
+              },
+              headerTintColor: CombinedDefaultTheme.colors.headerColor,
+              headerRight: ({tintColor}) => (
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'music'}
+                    color={tintColor}
+                    size={15}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'signal'}
+                    color={tintColor}
+                    size={15}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'ellipsis-v'}
+                    color={tintColor}
+                    size={15}
+                    style={{marginRight: 15}}
+                  />
+                </View>
+              ),
+            }}
+            name={'Player'}
+            component={Player}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

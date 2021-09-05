@@ -4,11 +4,11 @@ import DiscoverCard from '../DiscoverCard';
 import DiscoverBanner from '../DiscoverBanner';
 import styles from './styles';
 import {Text} from 'react-native-paper';
-import images from '../../assets/images';
+import images from '~/assets/images';
 
 const Discover = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.container}>
       <DiscoverBanner />
       <View style={styles.moodsContainer}>
         <Text style={styles.moods}>Moods</Text>

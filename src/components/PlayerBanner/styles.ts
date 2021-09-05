@@ -1,13 +1,18 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
+const window = Dimensions.get('window');
 
 export default StyleSheet.create({
-  container: {},
+  container: {
+    flex: 0.8,
+  },
   imageContainer: {
     marginTop: 100,
     alignItems: 'center',
   },
   image: {
-    width: 300,
-    height: 300,
+    width: window.width - 25,
+    height: window.width - 25,
+    borderRadius: 5,
   },
 });

@@ -7,6 +7,9 @@ const styles = () => {
   } = useTheme();
 
   return StyleSheet.create({
+    container: {
+      flex: 1,
+    },
     tabBarContainer: {
       backgroundColor: primary,
     },

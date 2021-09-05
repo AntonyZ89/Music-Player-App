@@ -7,6 +7,8 @@ import Music from './Music';
 import PlayerBanner from './PlayerBanner';
 import PlayerOptions from './PlayerOptions';
 import PlayerTime from './PlayerTime';
+import PlayerBackground from './PlayerBackground';
+import PlayerInfo from './PlayerInfo';
 
 export {
   Discover,
@@ -14,6 +16,8 @@ export {
   PlayerBanner,
   PlayerOptions,
   PlayerTime,
+  PlayerBackground,
+  PlayerInfo,
   DiscoverCard,
   Tracks,
   TrackCard,

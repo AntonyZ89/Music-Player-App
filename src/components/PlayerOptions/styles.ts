@@ -6,6 +6,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 10,
+    flex: 0.05,
   },
   toggle: {
     backgroundColor: '#be4d56',

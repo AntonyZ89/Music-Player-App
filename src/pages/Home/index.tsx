@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import {FAB} from 'react-native-paper';
 import {SceneMap, TabBar, TabBarItem, TabView} from 'react-native-tab-view';
-import {Discover, Music, Tracks} from '../../components';
+import {Discover, Music, Tracks} from '~/components';
 import stylesheet from './styles';
 
 const scenes = SceneMap({
@@ -26,7 +26,7 @@ const Home = () => {
   ]);
 
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.container}>
       <Music />
       <FAB icon={'shuffle'} style={styles.FAB} />
       <TabView
