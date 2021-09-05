@@ -1,9 +1,8 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import DiscoverCard from '../DiscoverCard';
-import DiscoverBanner from '../DiscoverBanner';
-import styles from './styles';
+import {DiscoverBanner, DiscoverCard} from '..';
 import {Text} from 'react-native-paper';
+import styles from './styles';
 import images from '~/assets/images';
 
 const Discover = () => {

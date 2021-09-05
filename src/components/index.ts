@@ -9,6 +9,8 @@ import PlayerOptions from './PlayerOptions';
 import PlayerTime from './PlayerTime';
 import PlayerBackground from './PlayerBackground';
 import PlayerInfo from './PlayerInfo';
+import Album from './Album';
+import AlbumCard from './AlbumCard';
 
 export {
   Discover,
@@ -22,4 +24,6 @@ export {
   Tracks,
   TrackCard,
   Music,
+  Album,
+  AlbumCard,
 };

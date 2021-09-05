@@ -51,13 +51,21 @@ const App = () => {
         backgroundColor={CombinedDefaultTheme.colors.primary}
       />
       <NavigationContainer theme={CombinedDefaultTheme}>
-        <Stack.Navigator initialRouteName={'Home'}>
+        <Stack.Navigator
+          initialRouteName={'Home'}
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: CombinedDefaultTheme.colors.primary,
+            },
+            headerTintColor: CombinedDefaultTheme.colors.headerColor,
+            headerLeftContainerStyle: {
+              paddingLeft: 20,
+              paddingRight: 5,
+            },
+          }}>
           <Stack.Screen
             options={{
               title: 'My Music',
-              headerStyle: {
-                backgroundColor: CombinedDefaultTheme.colors.primary,
-              },
               headerLeft: () => (
                 <Icon
                   name={'bars'}
@@ -65,11 +73,6 @@ const App = () => {
                   size={25}
                 />
               ),
-              headerLeftContainerStyle: {
-                marginLeft: 20,
-                marginRight: 5,
-              },
-              headerTintColor: CombinedDefaultTheme.colors.headerColor,
             }}
             name={'Home'}
             component={Home}
@@ -77,11 +80,7 @@ const App = () => {
           <Stack.Screen
             options={{
               title: '',
-              headerStyle: {
-                backgroundColor: 'transparent',
-                elevation: 0,
-              },
-              headerTintColor: CombinedDefaultTheme.colors.headerColor,
+              headerTransparent: true,
               headerRight: ({tintColor}) => (
                 <View style={{flexDirection: 'row'}}>
                   <Icon

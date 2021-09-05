@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import {FAB} from 'react-native-paper';
 import {SceneMap, TabBar, TabBarItem, TabView} from 'react-native-tab-view';
-import {Discover, Music, Tracks} from '~/components';
+import {Album, Discover, Music, Tracks} from '~/components';
 import stylesheet from './styles';
 
 const scenes = SceneMap({
   tracks: Tracks,
-  playlists: Tracks,
+  album: Album,
   discover: Discover,
+  playlists: Tracks,
   folders: Tracks,
-  album: Tracks,
 });
 
 const Home = () => {
@@ -19,16 +19,15 @@ const Home = () => {
   const [index, setIndex] = useState(0);
   const [routes] = useState([
     {key: 'tracks', title: 'Tracks'},
-    {key: 'playlists', title: 'Playlists'},
-    {key: 'discover', title: 'Discover'},
-    {key: 'folders', title: 'Folders'},
     {key: 'album', title: 'Album'},
+    {key: 'discover', title: 'Discover'},
+    {key: 'playlists', title: 'Playlists'},
+    {key: 'folders', title: 'Folders'},
   ]);
 
   return (
     <View style={styles.container}>
       <Music />
-      <FAB icon={'shuffle'} style={styles.FAB} />
       <TabView
         navigationState={{index, routes}}
         renderTabBar={props => (
@@ -51,6 +50,7 @@ const Home = () => {
         onIndexChange={setIndex}
         initialLayout={{width: 300}}
       />
+      <FAB icon={'shuffle'} style={styles.FAB} />
     </View>
   );
 };
