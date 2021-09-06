@@ -37,8 +37,8 @@ const OutCard = ({title}: CARD) => (
   </View>
 );
 
-const FolderCard = ({type, ...props}: PROPS) => {
+const FolderTabCard = ({type, ...props}: PROPS) => {
   return type === 'in' ? <InCard {...props} /> : <OutCard {...props} />;
 };
 
-export default FolderCard;
+export default FolderTabCard;

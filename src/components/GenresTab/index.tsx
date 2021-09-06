@@ -1,25 +1,25 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import styles from './styles';
-import {GenreCard} from '..';
+import {GenreTabCard} from '..';
 
-const Genres = () => {
+const GenresTab = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
-        <GenreCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
+        <GenreTabCard />
       </ScrollView>
     </View>
   );
 };
 
-export default Genres;
+export default GenresTab;

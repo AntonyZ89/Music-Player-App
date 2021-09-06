@@ -1,22 +1,22 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import TrackCard from '../TrackCard';
+import TrackTabCard from '../TrackTabCard';
 import styles from './styles';
 
 const Tracks = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
-        <TrackCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
       </ScrollView>
     </View>
   );

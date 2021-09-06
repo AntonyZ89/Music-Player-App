@@ -1,8 +1,8 @@
 import DiscoverTab from './DiscoverTab';
-import DiscoverBanner from './DiscoverBanner';
-import DiscoverCard from './DiscoverCard';
+import DiscoverTabBanner from './DiscoverTabBanner';
+import DiscoverTabCard from './DiscoverTabCard';
 import TracksTab from './TracksTab';
-import TrackCard from './TrackCard';
+import TrackTabCard from './TrackTabCard';
 import Music from './Music';
 import PlayerBanner from './PlayerBanner';
 import PlayerOptions from './PlayerOptions';
@@ -10,36 +10,36 @@ import PlayerTime from './PlayerTime';
 import PlayerInfo from './PlayerInfo';
 import PlayerActions from './PlayerActions';
 import AlbumTab from './AlbumTab';
-import AlbumCard from './AlbumCard';
+import AlbumTabCard from './AlbumTabCard';
 import PlaylistsTab from './PlaylistsTab';
-import PlaylistCard from './PlaylistCard';
+import PlaylistTabCard from './PlaylistTabCard';
 import ArtistsTab from './ArtistsTab';
-import ArtistCard from './ArtistCard';
+import ArtistTabCard from './ArtistTabCard';
 import GenresTab from './GenresTab';
-import GenreCard from './GenreCard';
+import GenreTabCard from './GenreTabCard';
 import FoldersTab from './FoldersTab';
-import FolderCard from './FolderCard';
+import FolderTabCard from './FolderTabCard';
 
 export {
   DiscoverTab,
-  DiscoverBanner,
+  DiscoverTabBanner,
   PlayerBanner,
   PlayerOptions,
   PlayerTime,
   PlayerInfo,
   PlayerActions,
-  DiscoverCard,
+  DiscoverTabCard,
   TracksTab,
-  TrackCard,
+  TrackTabCard,
   Music,
   AlbumTab,
-  AlbumCard,
+  AlbumTabCard,
   PlaylistsTab,
-  PlaylistCard,
+  PlaylistTabCard,
   ArtistsTab,
-  ArtistCard,
+  ArtistTabCard,
   GenresTab,
-  GenreCard,
+  GenreTabCard,
   FoldersTab,
-  FolderCard,
+  FolderTabCard,
 };

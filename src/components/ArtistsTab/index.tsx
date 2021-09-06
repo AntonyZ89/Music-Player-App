@@ -1,25 +1,25 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import styles from './styles';
-import {ArtistCard} from '..';
+import {ArtistTabCard} from '..';
 
-const Artists = () => {
+const ArtistsTab = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
-        <ArtistCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
+        <ArtistTabCard />
       </ScrollView>
     </View>
   );
 };
 
-export default Artists;
+export default ArtistsTab;

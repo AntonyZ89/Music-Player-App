@@ -4,7 +4,7 @@ import {Text} from 'react-native-paper';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const AlbumCard = () => {
+const AlbumTabCard = () => {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
@@ -19,4 +19,4 @@ const AlbumCard = () => {
   );
 };
 
-export default AlbumCard;
+export default AlbumTabCard;

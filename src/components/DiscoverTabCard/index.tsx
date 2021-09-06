@@ -1,7 +1,6 @@
 import React from 'react';
 import {ImageBackground, View} from 'react-native';
 import {Text} from 'react-native-paper';
-import {Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './styles';
 
@@ -11,7 +10,7 @@ type PROPS = {
   source: any;
 };
 
-const DiscoverCard = ({title, icon, source}: PROPS) => {
+const DiscoverTabCard = ({title, icon, source}: PROPS) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -28,4 +27,4 @@ const DiscoverCard = ({title, icon, source}: PROPS) => {
   );
 };
 
-export default DiscoverCard;
+export default DiscoverTabCard;

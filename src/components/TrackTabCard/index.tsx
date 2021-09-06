@@ -9,21 +9,22 @@ import {AppStackParamList} from '~/App';
 import styles from './styles';
 
 type AppStackNavigationProp = StackNavigationProp<AppStackParamList>;
-type PROPS = {
-  name: string;
-};
 
-const PlaylistCard = ({name}: PROPS) => {
+const TrackTabCard = () => {
   const navigation = useNavigation<AppStackNavigationProp>();
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('Player')}>
       <View style={styles.container}>
-        <Text style={styles.title}>{name}</Text>
+        <View style={styles.info}>
+          <Text style={styles.track}>Track 01</Text>
+          <Text style={styles.artist}>{'<unknown>'}</Text>
+        </View>
+        <Text style={styles.time}>0:11</Text>
         <Icon size={14} color={'white'} name={'ellipsis-v'} />
       </View>
     </TouchableOpacity>
   );
 };
 
-export default PlaylistCard;
+export default TrackTabCard;

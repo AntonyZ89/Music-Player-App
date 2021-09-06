@@ -1,24 +1,24 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import {AlbumCard} from '..';
+import {AlbumTabCard} from '..';
 import styles from './styles';
 
-const Album = () => {
+const AlbumTab = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
+        <AlbumTabCard />
       </ScrollView>
     </View>
   );
 };
 
-export default Album;
+export default AlbumTab;

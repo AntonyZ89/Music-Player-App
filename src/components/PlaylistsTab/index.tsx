@@ -1,17 +1,17 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import styles from './styles';
-import {PlaylistCard} from '..';
+import {PlaylistTabCard} from '..';
 
 const Playlists = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <PlaylistCard name={'Recently Added'} />
-        <PlaylistCard name={'Most Played'} />
-        <PlaylistCard name={'Recently Played'} />
-        <PlaylistCard name={'Recommended'} />
-        <PlaylistCard name={'My Playlist'} />
+        <PlaylistTabCard name={'Recently Added'} />
+        <PlaylistTabCard name={'Most Played'} />
+        <PlaylistTabCard name={'Recently Played'} />
+        <PlaylistTabCard name={'Recommended'} />
+        <PlaylistTabCard name={'My Playlist'} />
       </ScrollView>
     </View>
   );

@@ -1,57 +1,57 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import {DiscoverBanner, DiscoverCard} from '..';
+import {DiscoverTabBanner, DiscoverTabCard} from '..';
 import {Text} from 'react-native-paper';
 import styles from './styles';
 import images from '~/assets/images';
 
-const Discover = () => {
+const DiscoverTab = () => {
   return (
     <View style={styles.container}>
-      <DiscoverBanner />
-      <View style={styles.moodsContainer}>
-        <Text style={styles.moods}>Moods</Text>
-        <ScrollView>
+      <ScrollView>
+        <DiscoverTabBanner />
+        <View style={styles.moodsContainer}>
+          <Text style={styles.moods}>Moods</Text>
           <View style={styles.row}>
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Focus'}
               icon={'leaf'}
               source={images.moods.focus}
             />
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Party'}
               icon={'glass-cheers'}
               source={images.moods.party}
             />
           </View>
           <View style={styles.row}>
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Sleep'}
               icon={'moon'}
               source={images.moods.sleep}
             />
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Travel'}
               icon={'car'}
               source={images.moods.travel}
             />
           </View>
           <View style={styles.row}>
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Workout'}
               icon={'users'}
               source={images.moods.workout}
             />
-            <DiscoverCard
+            <DiscoverTabCard
               title={'Romance'}
               icon={'heart'}
               source={images.moods.romance}
             />
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };
 
-export default Discover;
+export default DiscoverTab;
