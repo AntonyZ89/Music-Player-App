@@ -1,17 +1,19 @@
 import {useNavigation} from '@react-navigation/core';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
-import {View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {TouchableOpacity, View} from 'react-native';
 import {Text} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {AppStackParamList} from '~/App';
 import styles from './styles';
 
-type AppStackNavigationProp = StackNavigationProp<AppStackParamList>;
+type PlayerNavigationProp = NativeStackNavigationProp<
+  AppStackParamList,
+  'Player'
+>;
 
 const TrackTabCard = () => {
-  const navigation = useNavigation<AppStackNavigationProp>();
+  const navigation = useNavigation<PlayerNavigationProp>();
 
   return (
     <TouchableOpacity onPress={() => navigation.navigate('Player')}>

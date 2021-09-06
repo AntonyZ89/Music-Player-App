@@ -3,7 +3,7 @@ import {
   DarkTheme as NavigationDarkTheme,
   NavigationContainer,
 } from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   DefaultTheme as PaperDefaultTheme,
   DarkTheme as PaperDarkTheme,
@@ -11,12 +11,14 @@ import {
 } from 'react-native-paper';
 import React from 'react';
 import {Home, Player} from './pages';
-import {Platform, StatusBar, View} from 'react-native';
+import {StatusBar, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import Album from './pages/Album';
 
 export type AppStackParamList = {
   Home: undefined;
   Player: undefined;
+  Album: undefined;
 };
 
 const CombinedDefaultTheme = {
@@ -41,7 +43,7 @@ const CombinedDarkTheme = {
   },
 };
 
-const Stack = createStackNavigator<AppStackParamList>();
+const Stack = createNativeStackNavigator<AppStackParamList>();
 
 const App = () => {
   return (
@@ -58,10 +60,6 @@ const App = () => {
               backgroundColor: CombinedDefaultTheme.colors.primary,
             },
             headerTintColor: CombinedDefaultTheme.colors.headerColor,
-            headerLeftContainerStyle: {
-              paddingLeft: 20,
-              paddingRight: 5,
-            },
           }}>
           <Stack.Screen
             options={{
@@ -71,6 +69,7 @@ const App = () => {
                   name={'bars'}
                   color={CombinedDefaultTheme.colors.headerColor}
                   size={25}
+                  style={{marginRight: 16}}
                 />
               ),
             }}
@@ -80,16 +79,11 @@ const App = () => {
           <Stack.Screen
             options={{
               title: '',
-              ...(Platform.OS === 'ios'
-                ? {
-                    headerTransparent: true,
-                  }
-                : {
-                    headerStyle: {
-                      backgroundColor: 'transparent',
-                      elevation: 0,
-                    },
-                  }),
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerTransparent: true,
+              headerShadowVisible: false,
               headerRight: ({tintColor}) => (
                 <View style={{flexDirection: 'row'}}>
                   <Icon
@@ -115,6 +109,16 @@ const App = () => {
             }}
             name={'Player'}
             component={Player}
+          />
+          <Stack.Screen
+            options={{
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerTransparent: true,
+            }}
+            name={'Album'}
+            component={Album}
           />
         </Stack.Navigator>
       </NavigationContainer>
