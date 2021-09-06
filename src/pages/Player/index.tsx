@@ -1,23 +1,28 @@
 import React from 'react';
-import {View} from 'react-native';
+import {ImageBackground} from 'react-native';
 import {
-  PlayerBackground,
   PlayerBanner,
   PlayerInfo,
   PlayerOptions,
   PlayerTime,
+  PlayerActions,
 } from '~/components';
+import images from '~/assets/images';
 import styles from './styles';
 
 const Player = () => {
   return (
-    <View style={styles.container}>
-      <PlayerBackground />
+    <ImageBackground
+      source={images.player.background}
+      style={styles.container}
+      resizeMode={'cover'}
+      blurRadius={40}>
       <PlayerBanner />
+      <PlayerActions />
       <PlayerOptions />
       <PlayerTime />
       <PlayerInfo />
-    </View>
+    </ImageBackground>
   );
 };
 

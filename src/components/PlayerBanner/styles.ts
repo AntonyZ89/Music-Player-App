@@ -7,7 +7,7 @@ export default StyleSheet.create({
     flex: 0.8,
   },
   imageContainer: {
-    marginTop: 100,
+    marginTop: 80,
     alignItems: 'center',
   },
   image: {

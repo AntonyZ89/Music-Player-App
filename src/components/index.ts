@@ -7,10 +7,16 @@ import Music from './Music';
 import PlayerBanner from './PlayerBanner';
 import PlayerOptions from './PlayerOptions';
 import PlayerTime from './PlayerTime';
-import PlayerBackground from './PlayerBackground';
 import PlayerInfo from './PlayerInfo';
+import PlayerActions from './PlayerActions';
 import Album from './Album';
 import AlbumCard from './AlbumCard';
+import Playlists from './Playlists';
+import PlaylistCard from './PlaylistCard';
+import Artists from './Artists';
+import ArtistCard from './ArtistCard';
+import Genres from './Genres';
+import GenreCard from './GenreCard';
 
 export {
   Discover,
@@ -18,12 +24,18 @@ export {
   PlayerBanner,
   PlayerOptions,
   PlayerTime,
-  PlayerBackground,
   PlayerInfo,
+  PlayerActions,
   DiscoverCard,
   Tracks,
   TrackCard,
   Music,
   Album,
   AlbumCard,
+  Playlists,
+  PlaylistCard,
+  Artists,
+  ArtistCard,
+  Genres,
+  GenreCard,
 };

@@ -6,7 +6,7 @@ import styles from './styles';
 const PlayerBanner = () => (
   <View style={styles.container}>
     <View style={styles.imageContainer}>
-      <Image style={styles.image} source={images.player.main} />
+      <Image style={styles.image} source={images.player.background} />
     </View>
   </View>
 );

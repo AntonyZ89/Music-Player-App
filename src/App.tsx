@@ -11,7 +11,7 @@ import {
 } from 'react-native-paper';
 import React from 'react';
 import {Home, Player} from './pages';
-import {StatusBar, View} from 'react-native';
+import {Platform, StatusBar, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export type AppStackParamList = {
@@ -80,7 +80,16 @@ const App = () => {
           <Stack.Screen
             options={{
               title: '',
-              headerTransparent: true,
+              ...(Platform.OS === 'ios'
+                ? {
+                    headerTransparent: true,
+                  }
+                : {
+                    headerStyle: {
+                      backgroundColor: 'transparent',
+                      elevation: 0,
+                    },
+                  }),
               headerRight: ({tintColor}) => (
                 <View style={{flexDirection: 'row'}}>
                   <Icon

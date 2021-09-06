@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {ImageBackground, View} from 'react-native';
 import {Text} from 'react-native-paper';
 import {Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -14,10 +14,15 @@ type PROPS = {
 const DiscoverCard = ({title, icon, source}: PROPS) => {
   return (
     <View style={styles.container}>
-      <Image source={source} style={styles.background} />
-      <View style={styles.innerContainer}>
-        <Icon name={icon} color={'white'} size={30} solid />
-      </View>
+      <ImageBackground
+        source={source}
+        style={styles.background}
+        resizeMode={'cover'}
+        borderRadius={5}>
+        <View style={styles.innerContainer}>
+          <Icon name={icon} color={'white'} size={30} solid />
+        </View>
+      </ImageBackground>
       <Text style={styles.title}>{title}</Text>
     </View>
   );

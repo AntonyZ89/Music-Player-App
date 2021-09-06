@@ -1,4 +1,3 @@
-
 const assets = {
   moods: {
     focus: require('./moods/focus.jpg'),
@@ -9,7 +8,7 @@ const assets = {
     workout: require('./moods/workout.jpg'),
   },
   player: {
-    main: require('./player/woman.jpg'),
+    background: require('./player/woman.jpg'),
   },
 };
 
