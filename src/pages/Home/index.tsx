@@ -3,25 +3,25 @@ import {useWindowDimensions, View} from 'react-native';
 import {FAB} from 'react-native-paper';
 import {SceneMap, TabBar, TabBarItem, TabView} from 'react-native-tab-view';
 import {
-  Album,
-  Artists,
-  Discover,
-  Folders,
-  Genres,
+  AlbumTab,
+  ArtistsTab,
+  DiscoverTab,
+  FoldersTab,
+  GenresTab,
   Music,
-  Playlists,
-  Tracks,
+  PlaylistsTab,
+  TracksTab,
 } from '~/components';
 import stylesheet from './styles';
 
 const scenes = SceneMap({
-  tracks: Tracks,
-  album: Album,
-  discover: Discover,
-  artists: Artists,
-  genres: Genres,
-  playlists: Playlists,
-  folders: Folders,
+  tracks: TracksTab,
+  album: AlbumTab,
+  discover: DiscoverTab,
+  artists: ArtistsTab,
+  genres: GenresTab,
+  playlists: PlaylistsTab,
+  folders: FoldersTab,
 });
 
 const routes = [
@@ -54,7 +54,6 @@ const Home = () => {
       <Music />
       <TabView
         navigationState={{index, routes}}
-        onSwipeStart={() => console.log({index})}
         renderTabBar={props => (
           <TabBar
             {...props}
