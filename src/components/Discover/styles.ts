@@ -14,7 +14,7 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   moodsContainer: {
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    backgroundColor: 'rgba(0, 0, 0, 0.15)',
     paddingTop: 10,
   },
 });

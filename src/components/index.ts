@@ -17,6 +17,8 @@ import Artists from './Artists';
 import ArtistCard from './ArtistCard';
 import Genres from './Genres';
 import GenreCard from './GenreCard';
+import Folders from './Folders';
+import FolderCard from './FolderCard';
 
 export {
   Discover,
@@ -38,4 +40,6 @@ export {
   ArtistCard,
   Genres,
   GenreCard,
+  Folders,
+  FolderCard,
 };

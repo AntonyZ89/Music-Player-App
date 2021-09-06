@@ -6,6 +6,7 @@ import {
   Album,
   Artists,
   Discover,
+  Folders,
   Genres,
   Music,
   Playlists,
@@ -20,7 +21,7 @@ const scenes = SceneMap({
   artists: Artists,
   genres: Genres,
   playlists: Playlists,
-  folders: Tracks,
+  folders: Folders,
 });
 
 const routes = [
