@@ -57,6 +57,7 @@ const Home = () => {
         renderTabBar={props => (
           <TabBar
             {...props}
+            style={styles.tabBarContainer}
             scrollEnabled
             renderTabBarItem={({key, ...item_props}) => (
               <TabBarItem

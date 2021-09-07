@@ -20,6 +20,8 @@ const styles = () => {
     activeBarItem: {
       backgroundColor: '#6e3c42',
       padding: 10,
+      borderRadius: 15,
+      overflow: 'hidden',
     },
     FAB: {
       position: 'absolute',

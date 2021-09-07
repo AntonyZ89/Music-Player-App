@@ -6,6 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 15,
+    backgroundColor: 'rgba(0, 0, 0, 0.15)',
   },
   title: {
     fontSize: 16,

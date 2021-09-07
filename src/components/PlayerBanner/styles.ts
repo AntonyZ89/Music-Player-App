@@ -7,12 +7,13 @@ export default StyleSheet.create({
     flex: 0.8,
   },
   imageContainer: {
-    marginTop: 80,
+    flex: 0.95,
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   image: {
-    width: window.width - 25,
-    height: window.width - 25,
+    width: window.width - 40,
+    height: window.width - 40,
     borderRadius: 5,
   },
 });

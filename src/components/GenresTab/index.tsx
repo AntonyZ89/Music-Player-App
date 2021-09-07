@@ -7,16 +7,16 @@ const GenresTab = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
-        <GenreTabCard />
+        <GenreTabCard name={'Alternative'} />
+        <GenreTabCard name={'Blues'} />
+        <GenreTabCard name={'Country'} />
+        <GenreTabCard name={'Funk'} />
+        <GenreTabCard name={'Hip Hop'} />
+        <GenreTabCard name={'Jazz'} />
+        <GenreTabCard name={'Pop'} />
+        <GenreTabCard name={'Rock'} />
+        <GenreTabCard name={'Rap'} />
+        <GenreTabCard name={'Reggae'} />
       </ScrollView>
     </View>
   );

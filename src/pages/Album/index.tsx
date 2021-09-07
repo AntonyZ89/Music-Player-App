@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import {FAB} from 'react-native-paper';
-import {AlbumHeader, AlbumCard} from '~/components';
+import {AlbumHeader, TrackTabCard} from '~/components';
 import styles from './styles';
 
 const Album = () => {
@@ -9,16 +9,16 @@ const Album = () => {
     <View style={styles.container}>
       <AlbumHeader />
       <ScrollView>
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
-        <AlbumCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
+        <TrackTabCard />
       </ScrollView>
       <FAB icon={'shuffle'} style={styles.FAB} />
     </View>

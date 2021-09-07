@@ -7,14 +7,17 @@ import {AppStackParamList} from '~/App';
 import styles from './styles';
 
 type GenreNavigationProp = NavigationProp<AppStackParamList, 'Genre'>;
+type PROPS = {
+  name: string;
+};
 
-const GenreTabCard = () => {
+const GenreTabCard = ({name}: PROPS) => {
   const navigation = useNavigation<GenreNavigationProp>();
 
   return (
     <TouchableOpacity onPress={() => navigation.navigate('Genre')}>
       <View style={styles.container}>
-        <Text style={styles.title}>Alternativo</Text>
+        <Text style={styles.title}>{name}</Text>
         <Icon size={14} color={'white'} name={'ellipsis-v'} />
       </View>
     </TouchableOpacity>

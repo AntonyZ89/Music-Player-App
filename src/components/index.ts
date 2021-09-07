@@ -10,7 +10,6 @@ import PlayerTime from './PlayerTime';
 import PlayerInfo from './PlayerInfo';
 import PlayerActions from './PlayerActions';
 import AlbumHeader from './AlbumHeader';
-import AlbumCard from './AlbumCard';
 import AlbumTab from './AlbumTab';
 import AlbumTabCard from './AlbumTabCard';
 import PlaylistsTab from './PlaylistsTab';
@@ -36,7 +35,6 @@ export {
   TrackTabCard,
   Music,
   AlbumHeader,
-  AlbumCard,
   AlbumTab,
   AlbumTabCard,
   PlaylistsTab,

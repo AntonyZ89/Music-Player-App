@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
+    backgroundColor: 'rgba(0, 0, 0, 0.15)',
   },
   icon: {
     backgroundColor: '#632042',
