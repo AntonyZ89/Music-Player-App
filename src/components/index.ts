@@ -15,6 +15,7 @@ import AlbumTab from './AlbumTab';
 import AlbumTabCard from './AlbumTabCard';
 import PlaylistsTab from './PlaylistsTab';
 import PlaylistTabCard from './PlaylistTabCard';
+import ArtistHeader from './ArtistHeader';
 import ArtistsTab from './ArtistsTab';
 import ArtistTabCard from './ArtistTabCard';
 import GenresTab from './GenresTab';
@@ -40,6 +41,7 @@ export {
   AlbumTabCard,
   PlaylistsTab,
   PlaylistTabCard,
+  ArtistHeader,
   ArtistsTab,
   ArtistTabCard,
   GenresTab,

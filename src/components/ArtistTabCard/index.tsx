@@ -14,7 +14,7 @@ const ArtistTabCard = () => {
   const navigation = useNavigation<AppNativeStackNavigationProp>();
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('Player')}>
+    <TouchableOpacity onPress={() => navigation.navigate('Artist')}>
       <View style={styles.container}>
         <View style={styles.info}>
           <Text style={styles.title}>{'<unknown>'}</Text>

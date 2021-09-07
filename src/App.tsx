@@ -10,7 +10,7 @@ import {
   Provider as PaperProvider,
 } from 'react-native-paper';
 import React from 'react';
-import {Home, Player} from './pages';
+import {Artist, Genre, Home, Player, Playlist} from './pages';
 import {StatusBar, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Album from './pages/Album';
@@ -19,6 +19,9 @@ export type AppStackParamList = {
   Home: undefined;
   Player: undefined;
   Album: undefined;
+  Artist: undefined;
+  Genre: undefined;
+  Playlist: undefined;
 };
 
 const CombinedDefaultTheme = {
@@ -89,20 +92,20 @@ const App = () => {
                   <Icon
                     name={'music'}
                     color={tintColor}
-                    size={15}
+                    size={25}
                     style={{marginRight: 25}}
                   />
                   <Icon
                     name={'signal'}
                     color={tintColor}
-                    size={15}
+                    size={25}
                     style={{marginRight: 25}}
                   />
                   <Icon
                     name={'ellipsis-v'}
                     color={tintColor}
-                    size={15}
-                    style={{marginRight: 15}}
+                    size={25}
+                    style={{marginRight: 10}}
                   />
                 </View>
               ),
@@ -115,10 +118,93 @@ const App = () => {
               headerStyle: {
                 backgroundColor: 'transparent',
               },
+              headerRight: ({tintColor}) => (
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'sort-amount-down-alt'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'search'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 10}}
+                  />
+                </View>
+              ),
               headerTransparent: true,
+              headerShadowVisible: false,
             }}
             name={'Album'}
             component={Album}
+          />
+          <Stack.Screen
+            options={{
+              headerRight: ({tintColor}) => (
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'sort-amount-down-alt'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'search'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 10}}
+                  />
+                </View>
+              ),
+            }}
+            name={'Artist'}
+            component={Artist}
+          />
+          <Stack.Screen
+            options={{
+              headerRight: ({tintColor}) => (
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'sort-amount-down-alt'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'search'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 10}}
+                  />
+                </View>
+              ),
+            }}
+            name={'Genre'}
+            component={Genre}
+          />
+          <Stack.Screen
+            options={{
+              headerRight: ({tintColor}) => (
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'sort-amount-down-alt'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 25}}
+                  />
+                  <Icon
+                    name={'search'}
+                    color={tintColor}
+                    size={25}
+                    style={{marginRight: 10}}
+                  />
+                </View>
+              ),
+            }}
+            name={'Playlist'}
+            component={Playlist}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -6,6 +6,7 @@ export default StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10,
     alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.15)',
   },
   time: {
     color: 'white',
